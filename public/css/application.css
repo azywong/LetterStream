@@ -99,5 +99,9 @@ form {
   margin: 0 auto;
 }
 /* End styling for story.erb */
-
+#story_container span {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color:white;
+}
 

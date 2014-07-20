@@ -11,7 +11,7 @@ function formatting_story(){
   var array_of_letters = story.split("") ;
 
   for (var i = 0; i < array_of_letters.length; i++) {
-    text += "<span id='p" + i + "' style='font-size: 1.0em; color:#C0C0C0'>" + array_of_letters[i] + "</span>";
+    text += "<span id='p" + i + "' style='font-size: 2.0em; color:white'>" + array_of_letters[i] + "</span>";
   }
   $('#story_container').html(text);
 };
@@ -23,8 +23,9 @@ function waitAndTurnTheNextOneRed (i, $characters) {
     justClicked = false;
     return;
   };
-  $characters.eq(i).animate({color: 'red', fontSize: '2.2em'}, 1000);
-  $characters.eq(i).animate({color: 'red', fontSize: '1.0em'}, 3000);
+  $characters.eq(i).animate({color: 'red'}, 1000);
+  // $characters.eq(i).animate({color: 'red', fontSize: '2.2em'}, 1000);
+  // $characters.eq(i).animate({color: 'red', fontSize: '1.0em'}, 3000);
 
   setTimeout(function() {waitAndTurnTheNextOneRed(i+1, $characters)}, 150);
 }
