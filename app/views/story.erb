@@ -21,10 +21,9 @@
 </div>
 <button id="startBtn">Start Reading!</button>
 <div class="centerbutton">
-    <form action="/stories/<%= @story.id %>" method="post" id="deletestory">
-      <input name="_method" type="hidden" value="delete"/>
-      <input type="submit" class="indv_story" value="delete">
-    </form>
-    <a href="/stories/<%= @story.id %>/edit"><button class="indv_story">edit</button></a>
+  <form action="/stories/<%= @story.id %>" method="post" id="deletestory">
+    <input name="_method" type="hidden" value="delete"/>
+    <input type="submit" class="indv_story" value="delete">
+  </form>
+  <a href="/stories/<%= @story.id %>/edit"><button class="indv_story">edit</button></a>
 </div>
-
