@@ -77,12 +77,21 @@ input[type="submit"] {
 /* End styling for new.erb */
 
 /* Styling for story.erb */
+.choose_color , .choose_speed {
+  width: 80%;
+  margin: 0 auto;
+}
 #container input[type="submit"], #container button{
   background-color: #ffd4c4;
   border: none;
 }
 form {
   display: inline;
+}
+.color_radio_button, .speed_radio_button {
+  display: inline;
+  width: 20px;
+  margin: 0 10px;
 }
 .indv_story {
   border: none;
@@ -92,7 +101,7 @@ form {
 #startBtn {
   display: block;
   width: 80%;
-  margin: 5% auto;
+  margin: 3% auto;
 }
 .centerbutton {
   width: 80%;

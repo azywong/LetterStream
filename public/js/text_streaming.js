@@ -23,11 +23,13 @@ function waitAndTurnTheNextOneRed (i, $characters) {
     justClicked = false;
     return;
   };
-  $characters.eq(i).animate({color: 'red'}, 1000);
+  var a = $("input[name=color]:checked").val();
+  var b = parseFloat($("input[name=speed]:checked").val());
+  $characters.eq(i).animate({color: a}, 1000);
   // $characters.eq(i).animate({color: 'red', fontSize: '2.2em'}, 1000);
   // $characters.eq(i).animate({color: 'red', fontSize: '1.0em'}, 3000);
 
-  setTimeout(function() {waitAndTurnTheNextOneRed(i+1, $characters)}, 150);
+  setTimeout(function() {waitAndTurnTheNextOneRed(i+1, $characters)}, b);
 }
 
 var justClicked

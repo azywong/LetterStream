@@ -1,6 +1,23 @@
-<h3><%= @story.title %></h3>
+<h3>Title: <%= @story.title %></h3>
 <div id="story_container">
   <%= @story.story %>
+</div>
+<br/><br/>
+<div class="choose_color">
+    Color:
+    <form action="/stories/<%= @story.id %>" method="post" id="deletestory">
+          <input type="radio" class="color_radio_button" name="color" value="red"/>red
+         <input type="radio" class="color_radio_button" name="color" value="blue"/>blue
+          <input type="radio" class="color_radio_button" name="color" value="green"/>green
+    </form>
+</div>
+<div class="choose_speed">
+    Speed:
+    <form action="/stories/<%= @story.id %>" method="post" id="deletestory">
+          <input type="radio" class="speed_radio_button" name="speed" value="300"/>slow
+         <input type="radio" class="speed_radio_button" name="speed" value="120"/>medium
+          <input type="radio" class="speed_radio_button" name="speed" value="45"/>fast
+    </form>
 </div>
 <button id="startBtn">Start Reading!</button>
 <div class="centerbutton">
